@@ -4,6 +4,7 @@ import net.hadrus.alcocraft.effects.AlcoEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.svisvi.jigsaw.init.JigsawModMobEffects;
 
 public class AlcoBeerProperties {
     public static final FoodProperties SUN_PALE_ALE = (new FoodProperties.Builder())
@@ -106,9 +107,18 @@ public class AlcoBeerProperties {
             .effect(() -> new MobEffectInstance(AlcoEffects.FLIGHT.get(), 6000,0), 1.0f)
             .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 1.0F)
             .build();
+    public static final FoodProperties BEAWEED = (new FoodProperties.Builder())
+            .nutrition(5)
+            .saturationMod(0.6f)
+            .alwaysEat()
+            .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(JigsawModMobEffects.POOP.get(), 400,0), 1.0f)
+            .effect(() -> new MobEffectInstance(JigsawModMobEffects.PURGATIVE.get(), 400,0), 0.05f)
+            .effect(new MobEffectInstance(MobEffects.SATURATION, 800    , 0), 1.0F)
+            .build();
 
     public static final FoodProperties HOP = (new FoodProperties.Builder())
-            .nutrition(5)
+            .nutrition(2)
             .saturationMod(0.6f)
             .fast()
             .effect(new MobEffectInstance(MobEffects.CONFUSION, 100, 0), 1.0F)

@@ -62,6 +62,8 @@ public class AlcoBlocks {
             () -> new ChorusAleMugBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).noOcclusion()));
     public static final RegistryObject<Block> SPRUCE_MUG_BLOCK_NETHER_STAR_LAGER = registerBlockWithoutItem("spruce_mug_block_nether_star_lager",
             () -> new NetherStarLagerMugBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).noOcclusion()));
+    public static final RegistryObject<Block> SPRUCE_MUG_BLOCK_BEAWEED = registerBlockWithoutItem("spruce_mug_block_beaweed",
+            () -> new BeaweedMugBlock(BlockBehaviour.Properties.copy(Blocks.BARREL).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name,
                                                                      Supplier<T> block,

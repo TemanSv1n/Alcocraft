@@ -52,6 +52,9 @@ public class AlcoItems {
     public static final RegistryObject<Item> SPRUCE_MUG_NETHER_STAR_LAGER = ITEMS.register("spruce_mug_nether_star_lager",
             () -> new MugItem(AlcoBlocks.SPRUCE_MUG_BLOCK_NETHER_STAR_LAGER.get(),new Item.Properties().food(AlcoBeerProperties.NETHER_STAR_LAGER).stacksTo(16).tab(AlcoTab.ALCO_TAB)));
 
+    public static final RegistryObject<Item> SPRUCE_MUG_BEAWEED = ITEMS.register("spruce_mug_beaweed",
+            () -> new MugItem(AlcoBlocks.SPRUCE_MUG_BLOCK_BEAWEED.get(),new Item.Properties().food(AlcoBeerProperties.BEAWEED).stacksTo(16).tab(AlcoTab.ALCO_TAB)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

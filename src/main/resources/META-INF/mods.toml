@@ -22,3 +22,9 @@ Alcocraft is about brewing and drinking alcohol.
     versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.alcocraft]]
+modId="jigsaw"
+mandatory=true
+versionRange="[4.6.0,)"
+ordering="NONE"
+side="BOTH"
